@@ -9,5 +9,5 @@
     ![分类](https://github.com/YSX/raw/master/image/type.png)
     ![展示](https://github.com/YSX/raw/master/image/show.png)
     ![详情](https://github.com/YSX/raw/master/image/detail.png)
-    ![搜索](image/search.png)
+    ![搜索](./image/search.png)
     
