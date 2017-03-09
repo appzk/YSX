@@ -2,34 +2,29 @@
 阅读软件，数据是从追书神器抓的包，不定时更新。
 
 ## 图片展示
-[书架](https://github.com/libcm/YSX/blob/master/image/bookshelf.png)
-
-<img src="https://github.com/libcm/YSX/blob/master/image/bookshelf.png">
-
-[社区](https://github.com/libcm/YSX/blob/master/image/community.png)
-
-<img src="https://github.com/libcm/YSX/blob/master/image/community.png">
-
-[发现](https://github.com/libcm/YSX/blob/master/image/found.png)
-
-<img src="https://github.com/libcm/YSX/blob/master/image/found.png">
-
-[夜间模式](https://github.com/libcm/YSX/blob/master/image/night.png)
-
-<img src="https://github.com/libcm/YSX/blob/master/image/night.png">
-
-[搜索](https://github.com/libcm/YSX/blob/master/image/search.png)
-
-<img src="https://github.com/libcm/YSX/blob/master/image/search.png">
-
-[分类](https://github.com/libcm/YSX/blob/master/image/type.png)
-
-<img src="https://github.com/libcm/YSX/blob/master/image/type.png">
-
-[展示](https://github.com/libcm/YSX/blob/master/image/show.png)
-
-<img src="https://github.com/libcm/YSX/blob/master/image/show.png">
-
-[详情](https://github.com/libcm/YSX/blob/master/image/detail.png)
-
-<img src="https://github.com/libcm/YSX/blob/master/image/detail.png">
+<table border="0" width="100%">
+  <tr>
+    <td><img src="https://github.com/libcm/YSX/blob/master/image/bookshelf.png"></td>
+    <td><img src="https://github.com/libcm/YSX/blob/master/image/community.png"></td>
+    <td><img src="https://github.com/libcm/YSX/blob/master/image/found.png"></td>
+    <td><img src="https://github.com/libcm/YSX/blob/master/image/night.png"></td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/libcm/YSX/blob/master/image/bookshelf.png">书架</a></td>
+    <td><a href="https://github.com/libcm/YSX/blob/master/image/community.png">社区</a></td>
+    <td><a href="https://github.com/libcm/YSX/blob/master/image/found.png">发现</a></td>
+    <td><a href="https://github.com/libcm/YSX/blob/master/image/night.png">夜间模式</a></td>
+  </tr>
+  <tr>
+    <td><img src="https://github.com/libcm/YSX/blob/master/image/search.png"></td>
+    <td><img src="https://github.com/libcm/YSX/blob/master/image/type.png"></td>
+    <td><img src="https://github.com/libcm/YSX/blob/master/image/show.png"></td>
+    <td><img src="https://github.com/libcm/YSX/blob/master/image/detail.png"></td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/libcm/YSX/blob/master/image/search.png">搜索</a></td>
+    <td><a href="https://github.com/libcm/YSX/blob/master/image/type.png">分类</a></td>
+    <td><a href="https://github.com/libcm/YSX/blob/master/image/show.png">展示</a></td>
+    <td><a href="https://github.com/libcm/YSX/blob/master/image/detail.png">详情</a></td>
+  </tr>
+</table>
