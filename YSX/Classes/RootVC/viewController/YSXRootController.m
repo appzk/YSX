@@ -26,7 +26,7 @@ static NSString *found_cell_id = @"found_cell_id";
 #pragma mark -  lazy
 - (LBSegmentedControl *)segmentedControl {
     if (!_segmentedControl) {
-        _segmentedControl = [[LBSegmentedControl alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 44) items:@[@"书架", @"社区", @"我的"]];
+        _segmentedControl = [[LBSegmentedControl alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 44) items:@[@"书架", @"社区", @"发现"]];
         _segmentedControl.delegate = self;
         _segmentedControl.backgroundColor = RGBA_COLOR(19, 124, 118, 1);
         _segmentedControl.selectedColor = RGBA_COLOR(190, 179, 140, 1);
