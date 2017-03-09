@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="YSXBookshelfCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="127"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Fdv-1h-t02">
+                    <rect key="frame" x="10" y="10" width="71.5" height="107"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="Fdv-1h-t02" secondAttribute="height" multiplier="2/3" id="eDM-29-iDs"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sn9-Tl-odO">
+                    <rect key="frame" x="91.5" y="15" width="273.5" height="43.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iSb-D1-qoO">
+                    <rect key="frame" x="91.5" y="58.5" width="42" height="53.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k0q-24-cjU">
+                    <rect key="frame" x="139" y="59" width="42" height="54"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="k0q-24-cjU" firstAttribute="height" secondItem="iSb-D1-qoO" secondAttribute="height" id="04e-g2-KAY"/>
+                <constraint firstItem="Fdv-1h-t02" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="4j2-uY-qQe"/>
+                <constraint firstItem="k0q-24-cjU" firstAttribute="top" secondItem="iSb-D1-qoO" secondAttribute="top" id="8D3-Cm-Dev"/>
+                <constraint firstItem="iSb-D1-qoO" firstAttribute="leading" secondItem="Fdv-1h-t02" secondAttribute="trailing" constant="10" id="8g8-cl-XXM"/>
+                <constraint firstItem="Fdv-1h-t02" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="NZ6-jg-9Og"/>
+                <constraint firstItem="sn9-Tl-odO" firstAttribute="height" secondItem="Fdv-1h-t02" secondAttribute="height" multiplier="1/2" constant="-10" id="Vxo-Fh-PbP"/>
+                <constraint firstAttribute="bottom" secondItem="Fdv-1h-t02" secondAttribute="bottom" constant="10" id="btV-vU-byv"/>
+                <constraint firstItem="sn9-Tl-odO" firstAttribute="leading" secondItem="Fdv-1h-t02" secondAttribute="trailing" constant="10" id="glN-Z6-pgr"/>
+                <constraint firstItem="k0q-24-cjU" firstAttribute="leading" secondItem="iSb-D1-qoO" secondAttribute="trailing" constant="5" id="jAN-Fo-TQB"/>
+                <constraint firstItem="sn9-Tl-odO" firstAttribute="top" secondItem="Fdv-1h-t02" secondAttribute="top" constant="5" id="k1e-AK-v5w"/>
+                <constraint firstItem="iSb-D1-qoO" firstAttribute="bottom" secondItem="Fdv-1h-t02" secondAttribute="bottom" constant="-5" id="kO1-D7-eh0"/>
+                <constraint firstItem="iSb-D1-qoO" firstAttribute="height" secondItem="Fdv-1h-t02" secondAttribute="height" multiplier="1/2" id="vSv-cq-GtA"/>
+                <constraint firstAttribute="trailing" secondItem="sn9-Tl-odO" secondAttribute="trailing" constant="10" id="wFg-cc-piZ"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="bookImg" destination="Fdv-1h-t02" id="vqe-g4-Sqq"/>
+                <outlet property="bookName" destination="sn9-Tl-odO" id="XFs-gW-6iO"/>
+                <outlet property="lastChapter" destination="k0q-24-cjU" id="2g3-fP-bBO"/>
+                <outlet property="update" destination="iSb-D1-qoO" id="dlF-vA-YZZ"/>
+            </connections>
+            <point key="canvasLocation" x="59.5" y="-92.5"/>
+        </view>
+    </objects>
+</document>

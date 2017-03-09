@@ -1,0 +1,67 @@
+PODS:
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
+  - DKNightVersion (2.4.2):
+    - DKNightVersion/Core (= 2.4.2)
+    - DKNightVersion/CoreAnimation (= 2.4.2)
+    - DKNightVersion/UIKit (= 2.4.2)
+  - DKNightVersion/Core (2.4.2):
+    - DKNightVersion/Core/DeallocBlockExecutor (= 2.4.2)
+    - DKNightVersion/Core/extobjc (= 2.4.2)
+  - DKNightVersion/Core/DeallocBlockExecutor (2.4.2)
+  - DKNightVersion/Core/extobjc (2.4.2)
+  - DKNightVersion/CoreAnimation (2.4.2):
+    - DKNightVersion/Core
+  - DKNightVersion/UIKit (2.4.2):
+    - DKNightVersion/Core
+  - MGSwipeTableCell (1.5.6)
+  - MJRefresh (3.1.12)
+  - ProgressHUD (2.4)
+  - PYSearch (0.7.1)
+  - SDAutoLayout (2.1.7)
+  - SDWebImage (4.0.0):
+    - SDWebImage/Core (= 4.0.0)
+  - SDWebImage/Core (4.0.0)
+  - YBPopupMenu (0.1.2)
+  - YYModel (1.0.4)
+
+DEPENDENCIES:
+  - AFNetworking
+  - DKNightVersion
+  - MGSwipeTableCell
+  - MJRefresh
+  - ProgressHUD
+  - PYSearch
+  - SDAutoLayout
+  - SDWebImage
+  - YBPopupMenu
+  - YYModel
+
+SPEC CHECKSUMS:
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  DKNightVersion: a211bacb8d6a9677722aaf93e292a4e5908490c1
+  MGSwipeTableCell: 616700eb0ffd1c611ba909066cb7fd739790a0a7
+  MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
+  ProgressHUD: 4b66b0df0e08519c5c7283a198fd2867a114c95a
+  PYSearch: 9aefc44905388425223f3738f4c63d743a1df2dd
+  SDAutoLayout: e9b36d04b8c0b504762a04d76fbbe5108944297a
+  SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
+  YBPopupMenu: f081ab289c4c72483b940594e4976314157fc727
+  YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
+
+PODFILE CHECKSUM: b1480f63821888ad324d22486d9eae32c75813a3
+
+COCOAPODS: 1.1.1
