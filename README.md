@@ -2,11 +2,26 @@
 阅读软件，数据是从追书神器抓的包，不定时更新。
 
 ## 图片展示
-    <img src="https://github.com/libcm/YSX/blob/master/image/bookshelf.png" title="书架">
-    <img src="https://github.com/libcm/YSX/blob/master/image/community.png" title="社区">
-    <img src="https://github.com/libcm/YSX/blob/master/image/detail.png" title="详情">
-    <img src="https://github.com/libcm/YSX/blob/master/image/found.png" title="发现">
-    <img src="https://github.com/libcm/YSX/blob/master/image/night.png" title="夜间模式">
-    <img src="https://github.com/libcm/YSX/blob/master/image/search.png" title="搜索">
-    <img src="https://github.com/libcm/YSX/blob/master/image/show.png" title="展示">
-    <img src="https://github.com/libcm/YSX/blob/master/image/type.png" title="分类">
+<img src="https://github.com/libcm/YSX/blob/master/image/bookshelf.png">
+[书架](https://github.com/libcm/YSX/blob/master/image/bookshelf.png)
+
+<img src="https://github.com/libcm/YSX/blob/master/image/community.png">
+[社区](https://github.com/libcm/YSX/blob/master/image/community.png)
+
+<img src="https://github.com/libcm/YSX/blob/master/image/found.png">
+[发现](https://github.com/libcm/YSX/blob/master/image/found.png)
+
+<img src="https://github.com/libcm/YSX/blob/master/image/night.png">
+[夜间模式](https://github.com/libcm/YSX/blob/master/image/night.png)
+
+<img src="https://github.com/libcm/YSX/blob/master/image/search.png">
+[搜索](https://github.com/libcm/YSX/blob/master/image/search.png)
+
+<img src="https://github.com/libcm/YSX/blob/master/image/type.png">
+[分类](https://github.com/libcm/YSX/blob/master/image/type.png)
+
+<img src="https://github.com/libcm/YSX/blob/master/image/show.png">
+[展示](https://github.com/libcm/YSX/blob/master/image/show.png)
+
+<img src="https://github.com/libcm/YSX/blob/master/image/detail.png">
+[详情](https://github.com/libcm/YSX/blob/master/image/detail.png)
