@@ -41,12 +41,12 @@ static NSString *cell_id = @"cell_id";
     self.arr = [NSMutableArray array];
     [self setup];
     [self requestData];
-    self.tableView.dk_backgroundColorPicker = DKColorPickerWithKey(BG);
 }
 
 #pragma mark -  set up
 - (void)setup {
     self.title = @"分类";
+    self.tableView.dk_backgroundColorPicker = DKColorPickerWithKey(BG);
     self.automaticallyAdjustsScrollViewInsets = NO;
     [self.view addSubview:self.tableView];
 }
@@ -120,88 +120,5 @@ static NSString *cell_id = @"cell_id";
         return @"经典名著";
     }
 }
-
-/*
- NSString *url;
- if (indexPath.section == 0) {
- if (indexPath.row == 0) {
- url = @"http://api.zhuishushenqi.com/book/by-categories?gender=male&type=hot&major=玄幻&minor=&start=0&limit=50";
- }else if (indexPath.row == 1) {
- url = @"";
- }else if (indexPath.row == 2) {
- url = @"";
- }else if (indexPath.row == 3) {
- url = @"";
- }else if (indexPath.row == 4) {
- url = @"";
- }else if (indexPath.row == 5) {
- url = @"";
- }else if (indexPath.row == 6) {
- url = @"";
- }else if (indexPath.row == 7) {
- url = @"";
- }else if (indexPath.row == 8) {
- url = @"";
- }else if (indexPath.row == 9) {
- url = @"";
- }else if (indexPath.row == 10) {
- url = @"";
- }else if (indexPath.row == 11) {
- url = @"";
- }else if (indexPath.row == 12) {
- url = @"";
- }else if (indexPath.row == 13) {
- url = @"";
- }
- }else if (indexPath.section == 1) {
- if (indexPath.row == 0) {
- url = @"";
- }else if (indexPath.row == 1) {
- url = @"";
- }else if (indexPath.row == 2) {
- url = @"";
- }else if (indexPath.row == 3) {
- url = @"";
- }else if (indexPath.row == 4) {
- url = @"";
- }else if (indexPath.row == 5) {
- url = @"";
- }else if (indexPath.row == 6) {
- url = @"";
- }else if (indexPath.row == 7) {
- url = @"";
- }else if (indexPath.row == 8) {
- url = @"";
- }else if (indexPath.row == 9) {
- url = @"";
- }else if (indexPath.row == 10) {
- url = @"";
- }else if (indexPath.row == 11) {
- url = @"";
- }
- }else {
- if (indexPath.row == 0) {
- url = @"";
- }else if (indexPath.row == 1) {
- url = @"";
- }else if (indexPath.row == 2) {
- url = @"";
- }else if (indexPath.row == 3) {
- url = @"";
- }else if (indexPath.row == 4) {
- url = @"";
- }else if (indexPath.row == 5) {
- url = @"";
- }else if (indexPath.row == 6) {
- url = @"";
- }else if (indexPath.row == 7) {
- url = @"";
- }else if (indexPath.row == 8) {
- url = @"";
- }else if (indexPath.row == 9) {
- url = @"";
- }
- }
- */
 
 @end

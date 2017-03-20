@@ -35,28 +35,59 @@ static NSString *linkURL = @"http://api.zhuishushenqi.com/book/by-categories";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self setup];
+}
+
+#pragma mark -  set up
+- (void)setup {
     type = @"hot";
     page = 0;
     
     self.bookArr = [NSMutableArray array];
     
-    [self setup];
-    [self requestData];
-}
-
-#pragma mark -  set up
-- (void)setup {
     self.tableView.dk_backgroundColorPicker = DKColorPickerWithKey(BG);
     [self.tableView registerNib:[UINib nibWithNibName:@"YSXShowCell" bundle:nil] forCellReuseIdentifier:cell_id];
     self.tableView.rowHeight = 150;
+    
+    [self downRefresh];
+    [self upLoad];
+}
+
+#pragma mark -  down refresh
+- (void)downRefresh {
+    page = 0;
+    MJRefreshGifHeader *gifHeader = [MJRefreshGifHeader headerWithRefreshingBlock:^{
+        [self requestDataWithIsUp:NO];
+    }];
+    gifHeader.lastUpdatedTimeLabel.hidden = YES;
+    gifHeader.stateLabel.hidden = YES;
+    //添加gif图片
+    [gifHeader setImages:GIF_ARRAY forState:MJRefreshStateRefreshing];
+    self.tableView.mj_header = gifHeader;
+    [self.tableView.mj_header beginRefreshing];
+}
+
+#pragma mark -  up load
+- (void)upLoad {
+    page ++;
+    MJRefreshBackStateFooter *footer = [MJRefreshBackStateFooter footerWithRefreshingTarget:self refreshingAction:@selector(requestDataWithIsUp:)];
+    [footer setTitle:@"加载中..." forState:MJRefreshStatePulling];
+    [footer setTitle:@"加载中..." forState:MJRefreshStateIdle];
+    [footer setTitle:@"加载中..." forState:MJRefreshStateRefreshing];
+    self.tableView.mj_footer = footer;
 }
 
 #pragma mark -  request data
-- (void)requestData {
+- (void)requestDataWithIsUp:(BOOL)isUp {
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     
     NSString *url = [NSString stringWithFormat:@"%@?gender=male&type=%@&major=%@&minor=&start=%zi&limit=50", linkURL, type, self.name, page];
     [manager GET:url parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        [self.tableView.mj_header endRefreshing];
+        [self.tableView.mj_footer endRefreshing];
+        if (!isUp) {
+            [self.bookArr removeAllObjects];
+        }
         
         NSArray *arr = responseObject[@"books"];
         for (NSDictionary *dict in arr) {

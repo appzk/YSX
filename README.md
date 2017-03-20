@@ -2,29 +2,8 @@
 阅读软件，数据是从追书神器抓的包，不定时更新。
 
 ## 图片展示
-<table border="0" width="100%">
-  <tr>
-    <td><img src="https://github.com/libcm/YSX/blob/master/image/bookshelf.png"></td>
-    <td><img src="https://github.com/libcm/YSX/blob/master/image/community.png"></td>
-    <td><img src="https://github.com/libcm/YSX/blob/master/image/found.png"></td>
-    <td><img src="https://github.com/libcm/YSX/blob/master/image/night.png"></td>
-  </tr>
-  <tr>
-    <td align="center"><a href="https://github.com/libcm/YSX/blob/master/image/bookshelf.png">书架</a></td>
-    <td align="center"><a href="https://github.com/libcm/YSX/blob/master/image/community.png">社区</a></td>
-    <td align="center"><a href="https://github.com/libcm/YSX/blob/master/image/found.png">发现</a></td>
-    <td align="center"><a href="https://github.com/libcm/YSX/blob/master/image/night.png">夜间模式</a></td>
-  </tr>
-  <tr>
-    <td><img src="https://github.com/libcm/YSX/blob/master/image/search.png"></td>
-    <td><img src="https://github.com/libcm/YSX/blob/master/image/type.png"></td>
-    <td><img src="https://github.com/libcm/YSX/blob/master/image/show.png"></td>
-    <td><img src="https://github.com/libcm/YSX/blob/master/image/detail.png"></td>
-  </tr>
-  <tr>
-    <td align="center"><a href="https://github.com/libcm/YSX/blob/master/image/search.png">搜索</a></td>
-    <td align="center"><a href="https://github.com/libcm/YSX/blob/master/image/type.png">分类</a></td>
-    <td align="center"><a href="https://github.com/libcm/YSX/blob/master/image/show.png">展示</a></td>
-    <td align="center"><a href="https://github.com/libcm/YSX/blob/master/image/detail.png">详情</a></td>
-  </tr>
-</table>
+| ![img](/image/YSX/bookshelf.png) | ![img](/image/YSX/community.png) | ![img](/image/YSX/found.png) | ![img](/image/YSX/night.png) |
+|:-----|:-----|:-----|:-----|
+| [书架](/image/YSX/bookshelf.png) | [社区](/image/YSX/community.png) | [发现](/image/YSX/found.png) | [夜间](/image/YSX/night.png) |
+| ![img](/image/YSX/search.png) | ![img](/image/YSX/type.png) | ![img](/image/YSX/show.png) | ![img](/image/YSX/detail.png) |
+| [搜索](/image/YSX/search.png) | [分类](/image/YSX/type.png) | [展示](/image/YSX/show.png) | [详情](/image/YSX/detail.png) |

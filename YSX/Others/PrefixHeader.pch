@@ -10,6 +10,7 @@
 #define PrefixHeader_pch
 
 #import "Macro.h"
+#import "config.h"
 #import "UIView+Frame.h"
 #import "UIColor+Image.h"
 #import "YSX-swift.h"

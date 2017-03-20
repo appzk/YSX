@@ -68,6 +68,7 @@
 		0E354DC81E713970003380BD /* YSXBookshelfCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSXBookshelfCell.h; sourceTree = "<group>"; };
 		0E354DC91E713970003380BD /* YSXBookshelfCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSXBookshelfCell.m; sourceTree = "<group>"; };
 		0E354DCB1E71397C003380BD /* YSXBookshelfCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YSXBookshelfCell.xib; sourceTree = "<group>"; };
+		0E354DF31E723D6E003380BD /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
 		0ED695861E6955FD005E58AE /* YSX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YSX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0ED695A21E6958F5005E58AE /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0ED695A31E6958F5005E58AE /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -392,6 +393,7 @@
 				0ED695BC1E6958F5005E58AE /* Info.plist */,
 				0E354DA91E6FEB13003380BD /* DKColorTable.txt */,
 				0ED695BD1E6958F5005E58AE /* main.m */,
+				0E354DF31E723D6E003380BD /* config.h */,
 				0ED695CF1E695ECE005E58AE /* PrefixHeader.pch */,
 			);
 			path = Others;
