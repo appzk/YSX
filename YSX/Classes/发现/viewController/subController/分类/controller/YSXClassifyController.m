@@ -92,7 +92,6 @@ static NSString *cell_id = @"cell_id";
         YSXFoundContentModel *contentModel = model.press[indexPath.row];
         cell.model = contentModel;
     }
-    [cell cancleWithSelectionBackground];
     return cell;
 }
 

@@ -11,8 +11,8 @@
 @interface UITableViewCell (Background)
 
 /**
- *  取消选中颜色
+ *  取消选中样式
  */
-- (void)cancleWithSelectionBackground;
+- (void)cancleSelectedStyle;
 
 @end

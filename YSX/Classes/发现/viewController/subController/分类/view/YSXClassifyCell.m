@@ -16,6 +16,7 @@
         self.dk_backgroundColorPicker = DKColorPickerWithKey(BG);
         self.textLabel.dk_textColorPicker = DKColorPickerWithKey(TEXT);
         self.detailTextLabel.dk_textColorPicker = DKColorPickerWithKey(TEXT);
+        [self cancleSelectedStyle];
     }
     return self;
 }

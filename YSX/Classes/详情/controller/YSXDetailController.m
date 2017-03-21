@@ -7,16 +7,19 @@
 //
 
 #import "YSXDetailController.h"
-#import "YSXDetailView.h"
+#import "YSXDetailCell.h"
+#import "YSXDetailReviewCell.h"
 
-@interface YSXDetailController ()
+static NSString *kDetailCellID = @"kDetailCellID";
+static NSString *kDetailReviewCellID = @"kDetailReviewCellID";
+
+@interface YSXDetailController ()<UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, copy) NSString *bookID;
-@property (nonatomic, strong) YSXDetailView *detailView;
-@property (nonatomic, strong) YSXDetailModel *model;
+@property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) NSMutableArray *contentArr;
 @end
 
 @implementation YSXDetailController
-
 #pragma mark -  init
 - (instancetype)initWithBookID:(NSString *)bookID {
     if (self = [super init]) {
@@ -25,45 +28,66 @@
     return self;
 }
 
-#pragma mark -  lazy
-- (YSXDetailView *)detailView {
-    if (!_detailView) {
-        _detailView = [[NSBundle mainBundle] loadNibNamed:@"YSXDetailView" owner:nil options:nil].firstObject;
-        _detailView.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
-        [self.view addSubview:_detailView];
+- (UITableView *)tableView {
+    if (!_tableView) {
+        _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
+        _tableView.dataSource = self;
+        _tableView.delegate = self;
+        [_tableView registerNib:[UINib nibWithNibName:@"YSXDetailCell" bundle:nil] forCellReuseIdentifier:kDetailCellID];
+        [_tableView registerNib:[UINib nibWithNibName:@"YSXDetailReviewCell" bundle:nil] forCellReuseIdentifier:kDetailReviewCellID];
+        _tableView.estimatedRowHeight = 150;
     }
-    return _detailView;
+    return _tableView;
 }
 
 #pragma mark -  life cycle 
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setup];
-    self.detailView.hidden = YES;
     [self requestData];
 }
 
 #pragma mark -  set up
 - (void)setup {
+    self.contentArr = [NSMutableArray array];
+    [self.view addSubview:self.tableView];
     self.view.dk_backgroundColorPicker = DKColorPickerWithKey(BG);
+    self.tableView.dk_backgroundColorPicker = DKColorPickerWithKey(BG);
 }
 
 #pragma mark -  request data
 - (void)requestData {
     NSString *url = [NSString stringWithFormat:@"http://api.zhuishushenqi.com/book/%@", self.bookID];
     [[AFHTTPSessionManager manager] GET:url parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        
-        self.model = [YSXDetailModel yy_modelWithJSON:responseObject];
-        [self showData];
+        YSXDetailModel *model = [YSXDetailModel yy_modelWithJSON:responseObject];
+        [self.contentArr addObject:model];
+        [self.tableView reloadData];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
     }];
 }
 
-#pragma mark -  显示数据
-- (void)showData {
-    self.detailView.hidden = NO;
-    self.detailView.model = self.model;
+#pragma mark -  <UITableViewDataSource>
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
 }
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.contentArr.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.section == 0) {
+        YSXDetailCell *cell = [tableView dequeueReusableCellWithIdentifier:kDetailCellID];
+        cell.model = self.contentArr[indexPath.row];
+        return cell;
+    }else {
+        YSXDetailReviewCell *cell = [tableView dequeueReusableCellWithIdentifier:kDetailReviewCellID];
+        cell.model = self.contentArr[indexPath.row];
+        return cell;
+    }
+}
+
+
 
 @end

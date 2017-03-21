@@ -8,7 +8,7 @@
 
 #import "YSXBookshelf.h"
 #import "YSXBookshelfCell.h"
-//#import "YSXBookshelfModel.h"
+#import "YSXBookshelfModel.h"
 
 static NSString *cell_id = @"cell_id";
 static NSString *last_cell_id = @"last_cell_id";
@@ -16,7 +16,7 @@ static NSString *last_cell_id = @"last_cell_id";
 @interface YSXBookshelf ()<UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *bookArr;
-//@property (nonatomic, strong) YSXBookshelfModel *bookInfo;
+@property (nonatomic, strong) YSXBookshelfModel *model;
 @end
 
 @implementation YSXBookshelf
@@ -58,39 +58,62 @@ static NSString *last_cell_id = @"last_cell_id";
 #pragma mark - setup
 - (void)setup {
     [self.contentView addSubview:self.tableView];
+    
+    self.height = self.tableView.maxY;
+    [self setNeedsLayout];
+    
     self.bookArr = [NSMutableArray array];
     self.tableView.dk_backgroundColorPicker = DKColorPickerWithKey(BG);
+    self.model = [[YSXBookshelfModel alloc] init];
     
+    // 注册通知接收添加/删除书籍通知
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateBook) name:@"add" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateBook) name:@"remove" object:nil];
+}
+
+- (void)updateBook {
+    [self.tableView reloadData];
+    NSLog(@"刷新");
 }
 
 #pragma mark -  <UITableViewDataSource>
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.bookArr.count + 1;
+    return [self.model models].count + 2;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    if (indexPath.row == self.bookArr.count) {
+    if (indexPath.row > [self.model models].count) return [[UITableViewCell alloc] init];
+    if (indexPath.row == [self.model models].count) {
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:last_cell_id];
         cell.textLabel.text = @"添加你喜欢的书籍";
         cell.textLabel.dk_textColorPicker = DKColorPickerWithKey(TEXT);
         cell.detailTextLabel.dk_textColorPicker = DKColorPickerWithKey(TEXT);
         cell.dk_backgroundColorPicker = DKColorPickerWithKey(BG);
         cell.imageView.image = [UIImage imageNamed:@"add"];
-        [cell cancleWithSelectionBackground];
+        [cell cancleSelectedStyle];
         return cell;
     }else {
         YSXBookshelfCell *cell = [tableView dequeueReusableCellWithIdentifier:cell_id];
-        cell.model = self.bookArr[indexPath.row];
+        cell.model = [self.model models][indexPath.row];
         return cell;
     }
 }
 
 #pragma mark -  <UITableViewDelegate>
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.row == self.bookArr.count) {
+    if (indexPath.row == [self.model models].count) {
         // 发送添加书籍的通知
         [[NSNotificationCenter defaultCenter] postNotificationName:@"add_book" object:nil];
+    }
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.row == [self.model models].count) {
+        return 75;
+    }else if(indexPath.row > [self.model models].count) {
+        return 75;
+    }else {
+        return 125;
     }
 }
 

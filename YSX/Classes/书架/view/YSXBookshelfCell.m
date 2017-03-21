@@ -21,6 +21,7 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     
+    [self cancleSelectedStyle];
 }
 
 - (void)setModel:(YSXDetailModel *)model {
@@ -30,9 +31,7 @@
     [self.bookImg sd_setImageWithURL:[NSURL URLWithString:imgURL]];
     self.bookName.text = model.title;
     NSString *update = [model.updated replaceOfString:@[@"T",@"Z"] withString:@[@" ",@""]];
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    formatter.dateFormat = @"yyyy-MM-dd HH:mm:ss.SSS";
-    update = [NSString dateTimeDifferenceWithFromDate:[formatter dateFromString:update] toDate:[NSDate date]];
+    update = [update dateTimeDifferenceWithFromDate:[update dateWithDateFormat:@"yyyy-MM-dd HH:mm:ss.SSS"] toDate:[NSDate date]];
     self.update.text = update;
     self.lastChapter.text = model.lastChapter;
 }

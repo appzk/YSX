@@ -84,7 +84,7 @@ static NSString *cell_id = @"cell_id";
     cell.textLabel.dk_textColorPicker = DKColorPickerWithKey(TEXT);
     cell.detailTextLabel.dk_textColorPicker = DKColorPickerWithKey(TEXT);
     cell.dk_backgroundColorPicker = DKColorPickerWithKey(BG);
-    [cell cancleWithSelectionBackground];
+    [cell cancleSelectedStyle];
     return cell;
 }
 

@@ -59,6 +59,7 @@ static NSString *found_cell_id = @"found_cell_id";
 #pragma mark -  lifeCycle
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.automaticallyAdjustsScrollViewInsets = NO;
     [self.view addSubview:self.segmentedControl];
     [self setupNavightionViewController];
     [self.view addSubview:self.collectionView];
@@ -145,6 +146,16 @@ static NSString *found_cell_id = @"found_cell_id";
         } else {
             // 切换为夜间模式
             [self.dk_manager nightFalling];
+        }
+    }else {
+        NSString *path = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).lastObject;
+        path = [path stringByAppendingPathComponent:@"bookshelf.data"];
+        BOOL flag = [[NSFileManager defaultManager] removeItemAtPath:path error:nil];
+        if (flag) {
+            NSLog(@"删除成功");
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"remove" object:nil];
+        }else {
+            NSLog(@"删除失败");
         }
     }
 }

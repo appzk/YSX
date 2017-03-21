@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface YSXDetailModel : NSObject
+@interface YSXDetailModel : NSObject<NSCoding>
 @property (nonatomic, copy) NSString *bookID;
 @property (nonatomic, copy) NSString *author;
 @property (nonatomic, copy) NSString *minorCate;  // 类型

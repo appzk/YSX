@@ -82,7 +82,7 @@ static NSString *cell_id = @"cell_id";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cell_id];
     cell.textLabel.text = self.titleArr[indexPath.row];
     cell.imageView.image = [UIImage imageNamed:self.imgArr[indexPath.row]];
-    [cell cancleWithSelectionBackground];
+    [cell cancleSelectedStyle];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     cell.textLabel.dk_textColorPicker = DKColorPickerWithKey(TEXT);
     cell.dk_backgroundColorPicker = DKColorPickerWithKey(BG);

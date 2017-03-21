@@ -16,7 +16,16 @@
  *  @parma  toDate       结束时间
  *  return   时间差
  */
-+ (NSString *)dateTimeDifferenceWithFromDate:(NSDate *)formDate toDate:(NSDate *)toDate;
+- (NSString *)dateTimeDifferenceWithFromDate:(NSDate *)formDate toDate:(NSDate *)toDate;
+
+/**
+ *  字符串转NSDate
+ *
+ *  @parma  string               字符串
+ *  @parma  dateFormat       格式
+ *  return   NSDate
+ */
+- (NSDate *)dateWithDateFormat:(NSString *)dateFormat;
 
 /**
  *  字符串替换

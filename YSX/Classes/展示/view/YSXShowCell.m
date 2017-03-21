@@ -30,11 +30,13 @@
     self.bookDetail.dk_textColorPicker = DKColorPickerWithKey(TEXT);
     self.readCount.dk_textColorPicker = DKColorPickerWithKey(TEXT);
     self.retentionRate.dk_textColorPicker = DKColorPickerWithKey(TEXT);
+    
+    [self cancleSelectedStyle];
 }
 
 - (void)setModel:(YSXShowModel *)model {
     _model = model;
-    NSString *imgURL = [model.cover substringFromIndex:7];
+    NSString *imgURL = [NSString stringWithFormat:@"http://statics.zhuishushenqi.com%@", model.cover];
     [self.bookImg sd_setImageWithURL:[NSURL URLWithString:imgURL]];
     self.bookName.text = model.title;
     self.bookAuthor.text = model.author;

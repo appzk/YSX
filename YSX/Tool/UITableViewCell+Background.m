@@ -10,7 +10,7 @@
 
 @implementation UITableViewCell (Background)
 
-- (void)cancleWithSelectionBackground {
+- (void)cancleSelectedStyle {
     self.backgroundView = [UIView new];
     self.selectionStyle = UITableViewCellSelectionStyleNone;
 }

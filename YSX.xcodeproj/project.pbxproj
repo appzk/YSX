@@ -10,19 +10,20 @@
 		0E354D9D1E6FA564003380BD /* YSXSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E354D9A1E6FA564003380BD /* YSXSearchController.m */; };
 		0E354DAA1E6FEB13003380BD /* DKColorTable.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0E354DA91E6FEB13003380BD /* DKColorTable.txt */; };
 		0E354DAE1E6FF72D003380BD /* YSXShowModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E354DAD1E6FF72D003380BD /* YSXShowModel.m */; };
-		0E354DB11E701063003380BD /* YSXDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E354DB01E701063003380BD /* YSXDetailView.m */; };
-		0E354DB31E701070003380BD /* YSXDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E354DB21E701070003380BD /* YSXDetailView.xib */; };
 		0E354DB61E701895003380BD /* YSXDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E354DB51E701895003380BD /* YSXDetailModel.m */; };
 		0E354DBA1E70E87E003380BD /* NSString+Date.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E354DB91E70E87E003380BD /* NSString+Date.m */; };
 		0E354DC41E7135B0003380BD /* YSXBookshelfModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E354DC31E7135B0003380BD /* YSXBookshelfModel.m */; };
 		0E354DCA1E713970003380BD /* YSXBookshelfCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E354DC91E713970003380BD /* YSXBookshelfCell.m */; };
 		0E354DCC1E71397C003380BD /* YSXBookshelfCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E354DCB1E71397C003380BD /* YSXBookshelfCell.xib */; };
+		0E5E68901E7F72E200ED677F /* YSXDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5E688E1E7F72E200ED677F /* YSXDetailCell.m */; };
+		0E5E68911E7F72E200ED677F /* YSXDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E5E688F1E7F72E200ED677F /* YSXDetailCell.xib */; };
+		0E5E68951E7F731C00ED677F /* YSXDetailReviewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5E68931E7F731C00ED677F /* YSXDetailReviewCell.m */; };
+		0E5E68961E7F731C00ED677F /* YSXDetailReviewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E5E68941E7F731C00ED677F /* YSXDetailReviewCell.xib */; };
 		0ED695BF1E6958F5005E58AE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ED695A31E6958F5005E58AE /* AppDelegate.m */; };
 		0ED695C01E6958F5005E58AE /* YSXRootController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ED695A91E6958F5005E58AE /* YSXRootController.m */; };
 		0ED695C11E6958F5005E58AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0ED695B71E6958F5005E58AE /* Assets.xcassets */; };
 		0ED695C21E6958F5005E58AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0ED695B81E6958F5005E58AE /* LaunchScreen.storyboard */; };
 		0ED695C31E6958F5005E58AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0ED695BA1E6958F5005E58AE /* Main.storyboard */; };
-		0ED695C41E6958F5005E58AE /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0ED695BC1E6958F5005E58AE /* Info.plist */; };
 		0ED695C51E6958F5005E58AE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ED695BD1E6958F5005E58AE /* main.m */; };
 		0ED695CB1E695B0E005E58AE /* LBSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED695CA1E695B0E005E58AE /* LBSegmentedControl.swift */; };
 		0ED695D91E696ED8005E58AE /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ED695D81E696ED8005E58AE /* UIView+Frame.m */; };
@@ -56,9 +57,6 @@
 		0E354DA91E6FEB13003380BD /* DKColorTable.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DKColorTable.txt; sourceTree = "<group>"; };
 		0E354DAC1E6FF72D003380BD /* YSXShowModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSXShowModel.h; sourceTree = "<group>"; };
 		0E354DAD1E6FF72D003380BD /* YSXShowModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSXShowModel.m; sourceTree = "<group>"; };
-		0E354DAF1E701063003380BD /* YSXDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSXDetailView.h; sourceTree = "<group>"; };
-		0E354DB01E701063003380BD /* YSXDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSXDetailView.m; sourceTree = "<group>"; };
-		0E354DB21E701070003380BD /* YSXDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YSXDetailView.xib; sourceTree = "<group>"; };
 		0E354DB41E701895003380BD /* YSXDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSXDetailModel.h; sourceTree = "<group>"; };
 		0E354DB51E701895003380BD /* YSXDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSXDetailModel.m; sourceTree = "<group>"; };
 		0E354DB81E70E87E003380BD /* NSString+Date.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Date.h"; sourceTree = "<group>"; };
@@ -69,6 +67,12 @@
 		0E354DC91E713970003380BD /* YSXBookshelfCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSXBookshelfCell.m; sourceTree = "<group>"; };
 		0E354DCB1E71397C003380BD /* YSXBookshelfCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YSXBookshelfCell.xib; sourceTree = "<group>"; };
 		0E354DF31E723D6E003380BD /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
+		0E5E688D1E7F72E200ED677F /* YSXDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSXDetailCell.h; sourceTree = "<group>"; };
+		0E5E688E1E7F72E200ED677F /* YSXDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSXDetailCell.m; sourceTree = "<group>"; };
+		0E5E688F1E7F72E200ED677F /* YSXDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YSXDetailCell.xib; sourceTree = "<group>"; };
+		0E5E68921E7F731C00ED677F /* YSXDetailReviewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSXDetailReviewCell.h; sourceTree = "<group>"; };
+		0E5E68931E7F731C00ED677F /* YSXDetailReviewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSXDetailReviewCell.m; sourceTree = "<group>"; };
+		0E5E68941E7F731C00ED677F /* YSXDetailReviewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YSXDetailReviewCell.xib; sourceTree = "<group>"; };
 		0ED695861E6955FD005E58AE /* YSX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YSX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0ED695A21E6958F5005E58AE /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0ED695A31E6958F5005E58AE /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -193,6 +197,13 @@
 			name = NSString;
 			sourceTree = "<group>";
 		};
+		0E5E68971E7FDB0900ED677F /* Reader */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Reader;
+			sourceTree = "<group>";
+		};
 		0ED6957D1E6955FD005E58AE = {
 			isa = PBXGroup;
 			children = (
@@ -231,6 +242,7 @@
 				0ED695AE1E6958F5005E58AE /* 发现 */,
 				0EE41A4D1E6E9DFB00D0A173 /* 展示 */,
 				0EE41A4E1E6E9E7700D0A173 /* 详情 */,
+				0E5E68971E7FDB0900ED677F /* Reader */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -626,9 +638,12 @@
 		0EE41A541E6E9EF500D0A173 /* view */ = {
 			isa = PBXGroup;
 			children = (
-				0E354DAF1E701063003380BD /* YSXDetailView.h */,
-				0E354DB01E701063003380BD /* YSXDetailView.m */,
-				0E354DB21E701070003380BD /* YSXDetailView.xib */,
+				0E5E688D1E7F72E200ED677F /* YSXDetailCell.h */,
+				0E5E688E1E7F72E200ED677F /* YSXDetailCell.m */,
+				0E5E688F1E7F72E200ED677F /* YSXDetailCell.xib */,
+				0E5E68921E7F731C00ED677F /* YSXDetailReviewCell.h */,
+				0E5E68931E7F731C00ED677F /* YSXDetailReviewCell.m */,
+				0E5E68941E7F731C00ED677F /* YSXDetailReviewCell.xib */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -890,12 +905,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0ED695C41E6958F5005E58AE /* Info.plist in Resources */,
+				0E5E68911E7F72E200ED677F /* YSXDetailCell.xib in Resources */,
 				0ED695C31E6958F5005E58AE /* Main.storyboard in Resources */,
 				0EE41A621E6EA16B00D0A173 /* YSXShowCell.xib in Resources */,
+				0E5E68961E7F731C00ED677F /* YSXDetailReviewCell.xib in Resources */,
 				0ED695C11E6958F5005E58AE /* Assets.xcassets in Resources */,
 				0E354DAA1E6FEB13003380BD /* DKColorTable.txt in Resources */,
-				0E354DB31E701070003380BD /* YSXDetailView.xib in Resources */,
 				0E354DCC1E71397C003380BD /* YSXBookshelfCell.xib in Resources */,
 				0ED695C21E6958F5005E58AE /* LaunchScreen.storyboard in Resources */,
 			);
@@ -957,12 +972,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				0ED695D91E696ED8005E58AE /* UIView+Frame.m in Sources */,
+				0E5E68901E7F72E200ED677F /* YSXDetailCell.m in Sources */,
 				0EE41A571E6E9F2600D0A173 /* YSXShowController.m in Sources */,
 				0EE41A4B1E6E93B800D0A173 /* YSXClassifyCell.m in Sources */,
 				0EE41A041E6D121700D0A173 /* LBNavigationController.m in Sources */,
 				0EE41A2D1E6D75A100D0A173 /* YSXRankingController.m in Sources */,
 				0EE41A5A1E6E9F5400D0A173 /* YSXDetailController.m in Sources */,
 				0EE41A841E6EC3F100D0A173 /* YSXOriginalController.m in Sources */,
+				0E5E68951E7F731C00ED677F /* YSXDetailReviewCell.m in Sources */,
 				0E354DB61E701895003380BD /* YSXDetailModel.m in Sources */,
 				0EE41A7E1E6EC3A900D0A173 /* YSXHelpController.m in Sources */,
 				0EE41A301E6E481000D0A173 /* YSXBookshelf.m in Sources */,
@@ -985,7 +1002,6 @@
 				0EE41A811E6EC3D300D0A173 /* YSXReviewController.m in Sources */,
 				0E354DBA1E70E87E003380BD /* NSString+Date.m in Sources */,
 				0EE41A5D1E6EA05100D0A173 /* YSXShowCell.m in Sources */,
-				0E354DB11E701063003380BD /* YSXDetailView.m in Sources */,
 				0ED695C51E6958F5005E58AE /* main.m in Sources */,
 				0ED695BF1E6958F5005E58AE /* AppDelegate.m in Sources */,
 			);
@@ -1097,6 +1113,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

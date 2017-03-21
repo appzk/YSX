@@ -9,10 +9,10 @@
 #import "NSString+Date.h"
 
 @implementation NSString (Date)
-
-+ (NSString *)dateTimeDifferenceWithFromDate:(NSDate *)formDate toDate:(NSDate *)toDate {
+#pragma mark -  时间差
+- (NSString *)dateTimeDifferenceWithFromDate:(NSDate *)formDate toDate:(NSDate *)toDate {
     NSDateFormatter *dateFomatter = [[NSDateFormatter alloc] init];
-    dateFomatter.dateFormat = @"yyyy-MM-dd HH:mm:ss.0";
+    dateFomatter.dateFormat = @"yyyy-MM-dd HH:mm:ss.SSS";
     
     // 日历
     NSCalendar *calendar = [NSCalendar currentCalendar];
@@ -28,6 +28,9 @@
         str = [NSString stringWithFormat:@"%zi月前更新", time.month];
     }else if (time.day >= 1) {
         str = [NSString stringWithFormat:@"%zi天前更新", time.day];
+    }else if (time.hour >= 1) {
+        str = [NSString stringWithFormat:@"%zi小时前更新", time
+               .hour];
     }else if (time.minute >= 1) {
         str = [NSString stringWithFormat:@"%zi分钟前更新", time.minute];
     }else {
@@ -36,7 +39,12 @@
     return str;
 }
 
-
+#pragma mark -  字符串转NSDate
+- (NSDate *)dateWithDateFormat:(NSString *)dateFormat {
+    NSDateFormatter *date = [[NSDateFormatter alloc] init];
+    date.dateFormat = dateFormat;
+    return [date dateFromString:self];
+}
 
 #pragma mark -  替换字符
 - (NSString *)replaceOfString:(NSArray *)targets withString:(NSArray *)replacements {

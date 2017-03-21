@@ -11,12 +11,20 @@
 
 @interface YSXBookshelfModel : NSObject
 
-- (void)addWithModel:(YSXDetailModel *)model;;
-- (void)removeWithModel:(YSXDetailModel *)model;
-
 /**
- *  存储数据的key
+ .   添加书籍模型
  */
-- (NSString *)bookInfoKey;
-
+- (void)addWithModel:(YSXDetailModel *)model;
+/**
+ .   移除书籍模型
+ */
+- (void)removeWithModel:(YSXDetailModel *)model;
+/**
+ .   书架的所有书籍模型
+ */
+- (NSArray *)models;
+/**
+ .   判断书架中是否存在某书籍
+ */
+- (BOOL)isBookID:(NSString *)bookID;
 @end

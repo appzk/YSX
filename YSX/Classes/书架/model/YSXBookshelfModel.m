@@ -8,12 +8,14 @@
 
 #import "YSXBookshelfModel.h"
 
+static NSString *kBookInfo = @"kBookInfo";
+
 @interface YSXBookshelfModel ()
 @property (nonatomic, strong) NSMutableArray *arr;
 @end
 
 @implementation YSXBookshelfModel {
-    NSUserDefaults *user;
+    NSString *path;
 }
 
 #pragma mark - init
@@ -27,22 +29,64 @@
 #pragma mark - setup
 - (void)setup {
     self.arr = [NSMutableArray array];
-    user = [NSUserDefaults standardUserDefaults];
+    path = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).lastObject;
+    path = [path stringByAppendingPathComponent:@"bookshelf.data"];
 }
 
 
 - (void)addWithModel:(YSXDetailModel *)model {
-    [self.arr addObject:model];
-    [user setObject:self.arr forKey:@"book_info"];
+    // 判断是否有归档文件
+    if ([[NSFileManager defaultManager] fileExistsAtPath:path]) {
+        // 解档
+        self.arr = [NSKeyedUnarchiver unarchiveObjectWithFile:path];
+        [self.arr addObject:model];
+        [[NSFileManager defaultManager] removeItemAtPath:path error:nil];
+    }
+    // 归档
+    BOOL flag = [NSKeyedArchiver archiveRootObject:self.arr toFile:path];
+    if (flag) {
+        // 发送添加书籍通知
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"add" object:nil];
+    }
 }
 
 - (void)removeWithModel:(YSXDetailModel *)model {
-    [self.arr removeObject:model];
-    [user synchronize];
+    // 判断是否有归档文件
+    if ([[NSFileManager defaultManager] fileExistsAtPath:path]) {
+        // 解档
+        self.arr = [NSKeyedUnarchiver unarchiveObjectWithFile:path];
+        for (YSXDetailModel *m in self.arr) {
+            if ([m.bookID isEqualToString:model.bookID]) {
+                [self.arr removeObject:model];
+            }
+        }
+        [[NSFileManager defaultManager] removeItemAtPath:path error:nil];
+    }
+    BOOL flag = [NSKeyedArchiver archiveRootObject:self.arr toFile:path];
+    if (flag) {
+        // 发送添加书籍通知
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"remove" object:nil];
+    }
 }
 
-- (NSString *)bookInfo {
-    return @"book_info";
+- (NSArray *)models {
+    // 解档
+    return [NSKeyedUnarchiver unarchiveObjectWithFile:path];
+}
+
+- (BOOL)isBookID:(NSString *)bookID {
+    // 解档
+    self.arr = [NSKeyedUnarchiver unarchiveObjectWithFile:path];
+    BOOL isExist = NO;
+    for (NSUInteger idx = 0; idx < self.arr.count; idx ++) {
+        YSXDetailModel *model = self.arr[idx];
+        if ([model.bookID isEqualToString:bookID]) {
+            isExist = YES;
+        }else {
+            isExist = NO;
+        }
+    }
+    return isExist;
 }
 
 @end
