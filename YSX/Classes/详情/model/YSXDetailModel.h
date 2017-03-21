@@ -12,6 +12,7 @@
 @property (nonatomic, copy) NSString *bookID;
 @property (nonatomic, copy) NSString *author;
 @property (nonatomic, copy) NSString *minorCate;  // 类型
+@property (nonatomic, copy) NSString *cat;
 @property (nonatomic, copy) NSString *cover;    //  图片
 @property (nonatomic, copy) NSString *latelyFollower;   // 人数
 @property (nonatomic, copy) NSString *retentionRatio;   // 留存率

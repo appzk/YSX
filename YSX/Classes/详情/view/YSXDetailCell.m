@@ -8,6 +8,7 @@
 
 #import "YSXDetailCell.h"
 #import "YSXBookshelfModel.h"
+#import "YSXReadPageController.h"
 
 @interface YSXDetailCell ()
 
@@ -69,8 +70,13 @@
     [self.bookIcon sd_setImageWithURL:[NSURL URLWithString:imgURL]];
     self.bookName.text = model.title;
     self.bookAuthor.text = model.author;
-    self.bookType.text = model.minorCate;
-    ;
+    
+    if ([model.minorCate isEqualToString:@" "]) {
+        self.bookType.text = model.minorCate;
+    }else {
+        self.bookType.text = model.cat;
+    }
+    
     NSString *count = [NSString stringWithFormat:@"%zi万字", [model.wordCount integerValue] / 10000];
     self.bookCount.text = count;
     
@@ -80,7 +86,7 @@
     self.lastUpdate.text = [NSString stringWithFormat:@"%@", date];
     
     self.readCount.text = [NSString stringWithFormat:@"%@人", model.latelyFollower];
-    self.retentionRate.text = [NSString stringWithFormat:@"%@%%", model.retentionRatio];
+    self.retentionRate.text = [NSString stringWithFormat:@"%.2f%%", [model.retentionRatio floatValue]];
     if ([model.serializeWordCount integerValue] < 0) {
         self.updateCount.text = @"暂无法统计";
     }else {
@@ -108,7 +114,7 @@
 
 #pragma mark -  开始阅读
 - (IBAction)startRead:(id)sender {
-    
+    [self.viewController presentViewController:[[YSXReadPageController alloc] init] animated:YES completion:nil];
 }
 
 - (void)setupButton {

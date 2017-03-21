@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface YSXSearchController : UITableViewController
+@interface YSXSearchController : UIViewController
+
+- (instancetype)initWithSearchText:(NSString *)text;
 
 @end

@@ -21,4 +21,9 @@
 @property (assign, nonatomic) CGSize size;
 @property (assign, nonatomic) CGPoint origin;
 
+/**
+ .   获取当前视图所在的控制器
+ */
+@property (nonatomic, strong, readonly) UIViewController *viewController;
+
 @end

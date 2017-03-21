@@ -15,12 +15,14 @@ static NSString *linkURL = @"http://api.zhuishushenqi.com/book/by-categories";
 
 @interface YSXShowController ()
 @property (nonatomic, copy) NSString *name;
+@property (nonatomic, strong) NSMutableDictionary *parameters;
 @property (nonatomic, strong) NSMutableArray *bookArr;
 @end
 
 @implementation YSXShowController {
     NSString *type;         // 热门：hot   新书：new  好评：reputation   完结：over
     NSUInteger page;
+    NSUInteger bookCount;
 }
 
 #pragma mark -  init
@@ -41,7 +43,6 @@ static NSString *linkURL = @"http://api.zhuishushenqi.com/book/by-categories";
 #pragma mark -  set up
 - (void)setup {
     type = @"hot";
-    page = 0;
     
     self.bookArr = [NSMutableArray array];
     
@@ -49,15 +50,11 @@ static NSString *linkURL = @"http://api.zhuishushenqi.com/book/by-categories";
     [self.tableView registerNib:[UINib nibWithNibName:@"YSXShowCell" bundle:nil] forCellReuseIdentifier:cell_id];
     self.tableView.rowHeight = 150;
     
-    [self downRefresh];
-    [self upLoad];
-}
-
-#pragma mark -  down refresh
-- (void)downRefresh {
-    page = 0;
+    bookCount = 50;
+    
+    // 下拉刷新
     MJRefreshGifHeader *gifHeader = [MJRefreshGifHeader headerWithRefreshingBlock:^{
-        [self requestDataWithIsUp:NO];
+        [self downRefresh];
     }];
     gifHeader.lastUpdatedTimeLabel.hidden = YES;
     gifHeader.stateLabel.hidden = YES;
@@ -65,45 +62,54 @@ static NSString *linkURL = @"http://api.zhuishushenqi.com/book/by-categories";
     [gifHeader setImages:GIF_ARRAY forState:MJRefreshStateRefreshing];
     self.tableView.mj_header = gifHeader;
     [self.tableView.mj_header beginRefreshing];
-}
-
-#pragma mark -  up load
-- (void)upLoad {
-    page ++;
-    MJRefreshBackStateFooter *footer = [MJRefreshBackStateFooter footerWithRefreshingTarget:self refreshingAction:@selector(requestDataWithIsUp:)];
+    
+    // 上拉加载
+    MJRefreshBackStateFooter *footer = [MJRefreshBackStateFooter footerWithRefreshingTarget:self refreshingAction:@selector(upLoad)];
     [footer setTitle:@"加载中..." forState:MJRefreshStatePulling];
     [footer setTitle:@"加载中..." forState:MJRefreshStateIdle];
     [footer setTitle:@"加载中..." forState:MJRefreshStateRefreshing];
     self.tableView.mj_footer = footer;
+    
+    [self downRefresh];
 }
 
-#pragma mark -  request data
-- (void)requestDataWithIsUp:(BOOL)isUp {
-    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    
-    NSString *url = [NSString stringWithFormat:@"%@?gender=male&type=%@&major=%@&minor=&start=%zi&limit=50", linkURL, type, self.name, page];
-    [manager GET:url parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+#pragma mark -  down refresh
+- (void)downRefresh {
+    page = 0;
+    NSString *url = [NSString stringWithFormat:@"%@?gender=male&type=%@&major=%@&minor=&start=%zi&limit=%zi", linkURL, type, self.name, page, bookCount];
+    [[AFHTTPSessionManager manager] GET:url parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         [self.tableView.mj_header endRefreshing];
-        [self.tableView.mj_footer endRefreshing];
-        if (!isUp) {
-            [self.bookArr removeAllObjects];
-        }
-        
-        NSArray *arr = responseObject[@"books"];
-        for (NSDictionary *dict in arr) {
-            YSXShowModel *model = [YSXShowModel yy_modelWithDictionary:dict];
-            [self.bookArr addObject:model];
-        }
-
-        [self.tableView reloadData];
+        [self.bookArr removeAllObjects];
+        [self addModelWithResponseObject:responseObject];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        NSLog(@"error:%@", error);
+        NSLog(@"%d->%s:%@", __LINE__, __func__, error);
     }];
+}
+
+#pragma mark -  up load
+- (void)upLoad {
+    page += bookCount;
+    NSString *url = [NSString stringWithFormat:@"%@?gender=male&type=%@&major=%@&minor=&start=%zi&limit=%zi", linkURL, type, self.name, page, bookCount];
+    [[AFHTTPSessionManager manager] GET:url parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        [self.tableView.mj_footer endRefreshing];
+        [self addModelWithResponseObject:responseObject];
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"%d->%s:%@", __LINE__, __func__, error);
+    }];
+}
+
+#pragma mark -  添加模型
+- (void)addModelWithResponseObject:(id)responseObject {
+    NSArray *arr = responseObject[@"books"];
+    for (NSDictionary *dict in arr) {
+        YSXShowModel *model = [YSXShowModel yy_modelWithDictionary:dict];
+        [self.bookArr addObject:model];
+    }
+    [self.tableView reloadData];
 }
 
 #pragma mark - Table view data source
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-
     return self.bookArr.count;
 }
 

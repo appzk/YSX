@@ -30,9 +30,9 @@
 
 /// 自定义日志输入(NSLog)
 #ifdef DEBUG
-#define LibLog(s, ... ) NSLog( @"[%@ in line %d]=> %@", [[NSString stringWithUTF8String:__FILE__] lastPathComponent], __LINE__, [NSString stringWithFormat:(s), ##__VA_ARGS__] )
+#define NSLog(s, ... ) NSLog( @"[%@ in line %d]=> %@", [[NSString stringWithUTF8String:__FILE__] lastPathComponent], __LINE__, [NSString stringWithFormat:(s), ##__VA_ARGS__] )
 #else
-#define LibLog(s, ... )
+#define NSLog(s, ... )
 #endif
 
 /// 单例.h

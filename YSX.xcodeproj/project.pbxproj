@@ -19,6 +19,12 @@
 		0E5E68911E7F72E200ED677F /* YSXDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E5E688F1E7F72E200ED677F /* YSXDetailCell.xib */; };
 		0E5E68951E7F731C00ED677F /* YSXDetailReviewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5E68931E7F731C00ED677F /* YSXDetailReviewCell.m */; };
 		0E5E68961E7F731C00ED677F /* YSXDetailReviewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E5E68941E7F731C00ED677F /* YSXDetailReviewCell.xib */; };
+		0E5E68BE1E80D6CF00ED677F /* YSXReadPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5E68BD1E80D6CF00ED677F /* YSXReadPageController.m */; };
+		0E5E68C41E80FA3800ED677F /* LBPagination.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5E68C31E80FA3800ED677F /* LBPagination.m */; };
+		0E5E68C71E80FA8F00ED677F /* YSXReadController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5E68C61E80FA8F00ED677F /* YSXReadController.m */; };
+		0E5E68CB1E810C6100ED677F /* YSXSearchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5E68C91E810C6100ED677F /* YSXSearchCell.m */; };
+		0E5E68CC1E810C6100ED677F /* YSXSearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E5E68CA1E810C6100ED677F /* YSXSearchCell.xib */; };
+		0E5E68CF1E81130600ED677F /* YSXSearchModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5E68CE1E81130600ED677F /* YSXSearchModel.m */; };
 		0ED695BF1E6958F5005E58AE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ED695A31E6958F5005E58AE /* AppDelegate.m */; };
 		0ED695C01E6958F5005E58AE /* YSXRootController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ED695A91E6958F5005E58AE /* YSXRootController.m */; };
 		0ED695C11E6958F5005E58AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0ED695B71E6958F5005E58AE /* Assets.xcassets */; };
@@ -73,6 +79,17 @@
 		0E5E68921E7F731C00ED677F /* YSXDetailReviewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSXDetailReviewCell.h; sourceTree = "<group>"; };
 		0E5E68931E7F731C00ED677F /* YSXDetailReviewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSXDetailReviewCell.m; sourceTree = "<group>"; };
 		0E5E68941E7F731C00ED677F /* YSXDetailReviewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YSXDetailReviewCell.xib; sourceTree = "<group>"; };
+		0E5E68BC1E80D6CF00ED677F /* YSXReadPageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSXReadPageController.h; sourceTree = "<group>"; };
+		0E5E68BD1E80D6CF00ED677F /* YSXReadPageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSXReadPageController.m; sourceTree = "<group>"; };
+		0E5E68C21E80FA3800ED677F /* LBPagination.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBPagination.h; sourceTree = "<group>"; };
+		0E5E68C31E80FA3800ED677F /* LBPagination.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBPagination.m; sourceTree = "<group>"; };
+		0E5E68C51E80FA8F00ED677F /* YSXReadController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSXReadController.h; sourceTree = "<group>"; };
+		0E5E68C61E80FA8F00ED677F /* YSXReadController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSXReadController.m; sourceTree = "<group>"; };
+		0E5E68C81E810C6100ED677F /* YSXSearchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YSXSearchCell.h; path = "YSX/Classes/RootVC/viewController/subController/搜索/view/YSXSearchCell.h"; sourceTree = SOURCE_ROOT; };
+		0E5E68C91E810C6100ED677F /* YSXSearchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YSXSearchCell.m; path = "YSX/Classes/RootVC/viewController/subController/搜索/view/YSXSearchCell.m"; sourceTree = SOURCE_ROOT; };
+		0E5E68CA1E810C6100ED677F /* YSXSearchCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = YSXSearchCell.xib; path = "YSX/Classes/RootVC/viewController/subController/搜索/view/YSXSearchCell.xib"; sourceTree = SOURCE_ROOT; };
+		0E5E68CD1E81130600ED677F /* YSXSearchModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSXSearchModel.h; sourceTree = "<group>"; };
+		0E5E68CE1E81130600ED677F /* YSXSearchModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSXSearchModel.m; sourceTree = "<group>"; };
 		0ED695861E6955FD005E58AE /* YSX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YSX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0ED695A21E6958F5005E58AE /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0ED695A31E6958F5005E58AE /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -177,6 +194,8 @@
 		0E354D9B1E6FA564003380BD /* model */ = {
 			isa = PBXGroup;
 			children = (
+				0E5E68CD1E81130600ED677F /* YSXSearchModel.h */,
+				0E5E68CE1E81130600ED677F /* YSXSearchModel.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -184,6 +203,9 @@
 		0E354D9C1E6FA564003380BD /* view */ = {
 			isa = PBXGroup;
 			children = (
+				0E5E68C81E810C6100ED677F /* YSXSearchCell.h */,
+				0E5E68C91E810C6100ED677F /* YSXSearchCell.m */,
+				0E5E68CA1E810C6100ED677F /* YSXSearchCell.xib */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -200,8 +222,38 @@
 		0E5E68971E7FDB0900ED677F /* Reader */ = {
 			isa = PBXGroup;
 			children = (
+				0E5E68C11E80D6EE00ED677F /* model */,
+				0E5E68C01E80D6E700ED677F /* view */,
+				0E5E68BF1E80D6D800ED677F /* controller */,
 			);
 			path = Reader;
+			sourceTree = "<group>";
+		};
+		0E5E68BF1E80D6D800ED677F /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				0E5E68BC1E80D6CF00ED677F /* YSXReadPageController.h */,
+				0E5E68BD1E80D6CF00ED677F /* YSXReadPageController.m */,
+				0E5E68C51E80FA8F00ED677F /* YSXReadController.h */,
+				0E5E68C61E80FA8F00ED677F /* YSXReadController.m */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		0E5E68C01E80D6E700ED677F /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		0E5E68C11E80D6EE00ED677F /* model */ = {
+			isa = PBXGroup;
+			children = (
+				0E5E68C21E80FA3800ED677F /* LBPagination.h */,
+				0E5E68C31E80FA3800ED677F /* LBPagination.m */,
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 		0ED6957D1E6955FD005E58AE = {
@@ -912,6 +964,7 @@
 				0ED695C11E6958F5005E58AE /* Assets.xcassets in Resources */,
 				0E354DAA1E6FEB13003380BD /* DKColorTable.txt in Resources */,
 				0E354DCC1E71397C003380BD /* YSXBookshelfCell.xib in Resources */,
+				0E5E68CC1E810C6100ED677F /* YSXSearchCell.xib in Resources */,
 				0ED695C21E6958F5005E58AE /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -973,12 +1026,14 @@
 			files = (
 				0ED695D91E696ED8005E58AE /* UIView+Frame.m in Sources */,
 				0E5E68901E7F72E200ED677F /* YSXDetailCell.m in Sources */,
+				0E5E68CF1E81130600ED677F /* YSXSearchModel.m in Sources */,
 				0EE41A571E6E9F2600D0A173 /* YSXShowController.m in Sources */,
 				0EE41A4B1E6E93B800D0A173 /* YSXClassifyCell.m in Sources */,
 				0EE41A041E6D121700D0A173 /* LBNavigationController.m in Sources */,
 				0EE41A2D1E6D75A100D0A173 /* YSXRankingController.m in Sources */,
 				0EE41A5A1E6E9F5400D0A173 /* YSXDetailController.m in Sources */,
 				0EE41A841E6EC3F100D0A173 /* YSXOriginalController.m in Sources */,
+				0E5E68CB1E810C6100ED677F /* YSXSearchCell.m in Sources */,
 				0E5E68951E7F731C00ED677F /* YSXDetailReviewCell.m in Sources */,
 				0E354DB61E701895003380BD /* YSXDetailModel.m in Sources */,
 				0EE41A7E1E6EC3A900D0A173 /* YSXHelpController.m in Sources */,
@@ -991,6 +1046,7 @@
 				0EE41A331E6E484E00D0A173 /* YSXCommunity.m in Sources */,
 				0E354DC41E7135B0003380BD /* YSXBookshelfModel.m in Sources */,
 				0ED695C01E6958F5005E58AE /* YSXRootController.m in Sources */,
+				0E5E68C41E80FA3800ED677F /* LBPagination.m in Sources */,
 				0ED695CB1E695B0E005E58AE /* LBSegmentedControl.swift in Sources */,
 				0EE41A191E6D4CF900D0A173 /* UIBarButtonItem+New.m in Sources */,
 				0EE41A131E6D428F00D0A173 /* UIColor+Image.m in Sources */,
@@ -1000,6 +1056,8 @@
 				0EE41A871E6EC40D00D0A173 /* YSXGirlController.m in Sources */,
 				0EE41A3C1E6E667400D0A173 /* YSXFoundContentModel.m in Sources */,
 				0EE41A811E6EC3D300D0A173 /* YSXReviewController.m in Sources */,
+				0E5E68C71E80FA8F00ED677F /* YSXReadController.m in Sources */,
+				0E5E68BE1E80D6CF00ED677F /* YSXReadPageController.m in Sources */,
 				0E354DBA1E70E87E003380BD /* NSString+Date.m in Sources */,
 				0EE41A5D1E6EA05100D0A173 /* YSXShowCell.m in Sources */,
 				0ED695C51E6958F5005E58AE /* main.m in Sources */,
