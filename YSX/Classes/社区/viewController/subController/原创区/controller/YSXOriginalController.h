@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface YSXOriginalController : UITableViewController
+@interface YSXOriginalController : UIViewController
 
 @end

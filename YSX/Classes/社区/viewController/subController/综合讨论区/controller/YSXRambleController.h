@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface YSXRambleController : UITableViewController
+@interface YSXRambleController : UIViewController
 
 @end

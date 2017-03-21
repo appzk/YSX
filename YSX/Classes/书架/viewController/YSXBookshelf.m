@@ -9,6 +9,7 @@
 #import "YSXBookshelf.h"
 #import "YSXBookshelfCell.h"
 #import "YSXBookshelfModel.h"
+#import "YSXReadPageController.h"
 
 static NSString *cell_id = @"cell_id";
 static NSString *last_cell_id = @"last_cell_id";
@@ -24,7 +25,7 @@ static NSString *last_cell_id = @"last_cell_id";
 #pragma mark -  lazy
 - (UITableView *)tableView {
     if (!_tableView) {
-        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.width, self.height)];
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.width, self.height - 64)];
         _tableView.delegate = self;
         _tableView.dataSource = self;
         [_tableView registerNib:[UINib nibWithNibName:@"YSXBookshelfCell" bundle:nil] forCellReuseIdentifier:cell_id];
@@ -78,11 +79,16 @@ static NSString *last_cell_id = @"last_cell_id";
 
 #pragma mark -  <UITableViewDataSource>
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [self.model models].count + 2;
+    return [self.model models].count + 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.row > [self.model models].count) return [[UITableViewCell alloc] init];
+//    if (indexPath.row > [self.model models].count) {
+//        UITableViewCell *cell = [[UITableViewCell alloc] init];
+//        cell.dk_backgroundColorPicker = DKColorPickerWithKey(BG);
+//        [cell cancleSelectedStyle];
+//        return cell;
+//    }
     if (indexPath.row == [self.model models].count) {
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:last_cell_id];
         cell.textLabel.text = @"添加你喜欢的书籍";
@@ -105,12 +111,11 @@ static NSString *last_cell_id = @"last_cell_id";
         // 发送添加书籍的通知
         [[NSNotificationCenter defaultCenter] postNotificationName:@"add_book" object:nil];
     }
+    [self.viewController presentViewController:[[YSXReadPageController alloc] init] animated:YES completion:nil];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.row == [self.model models].count) {
-        return 75;
-    }else if(indexPath.row > [self.model models].count) {
         return 75;
     }else {
         return 125;

@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface YSXReviewController : UITableViewController
+@interface YSXReviewController : UIViewController
 
 @end

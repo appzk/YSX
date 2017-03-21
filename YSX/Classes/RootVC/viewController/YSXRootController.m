@@ -77,7 +77,7 @@ static NSString *found_cell_id = @"found_cell_id";
 
 #pragma mark -  barButtonItem action
 - (void)searchAction:(UIBarButtonItem *)barButtonItem {
-    PYSearchViewController *searchViewController = [PYSearchViewController searchViewControllerWithHotSearches:nil searchBarPlaceholder:@"输入要书名或作者" didSearchBlock:^(PYSearchViewController *searchViewController, UISearchBar *searchBar, NSString *searchText) {
+    PYSearchViewController *searchViewController = [PYSearchViewController searchViewControllerWithHotSearches:@[@"玄幻", @"仙侠", @"都市", @"历史", @"网游", @"同人", @"科技"] searchBarPlaceholder:@"输入要书名或作者" didSearchBlock:^(PYSearchViewController *searchViewController, UISearchBar *searchBar, NSString *searchText) {
         [searchViewController.navigationController pushViewController:[[YSXSearchController alloc] initWithSearchText:searchText] animated:YES];
     }];
     searchViewController.hotSearchHeader.text = @"热门";

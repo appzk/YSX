@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.tableView.dk_backgroundColorPicker = DKColorPickerWithKey(BG);
+    self.view.dk_backgroundColorPicker = DKColorPickerWithKey(BG);
 }
 
 - (void)didReceiveMemoryWarning {
